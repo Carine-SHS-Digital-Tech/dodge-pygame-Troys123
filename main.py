@@ -43,7 +43,7 @@ class Character(pygame.sprite.Sprite):
         self.rect.x = 310
         self.rect.y = 420
 
-        self.image.blit(pygame.image.load('Superhero.png'),(0,0))
+        self.image.blit(pygame.image.load("Superhero.png"),(0,0))
 
     def moveCharacter(self,movement):
         if self.rect.x >= 5 and self.rect.x <= 645:
