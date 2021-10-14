@@ -85,7 +85,7 @@ while done == False:
             if event.key == pygame.K_LEFT:
                 movement = -5
             if event.key == pygame.K_RIGHT:
-                movement = 5
+                movement =5
         if event.type == pygame.KEYUP:
             movement = 0
 
@@ -118,7 +118,7 @@ while done == False:
     screen.blit( textImg, (10,10) )
 
     pygame.display.flip()                   # Go ahead and update the screen with what we've drawn.
-    clock.tick(40)                          # Limit to 20 frames per second
+    clock.tick(40)                       # Limit to 20 frames per second
 
 pygame.quit()                               # Close the window and quit.
 
