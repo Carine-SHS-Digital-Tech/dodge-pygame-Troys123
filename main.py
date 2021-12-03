@@ -65,7 +65,7 @@ font = pygame.font.Font(None, 36)
 # Define additional Functions and Procedures here
 allFallingObjects = pygame.sprite.Group()
 
-nextApple = pygame.time.get_ticks() + 2500
+nextApple = pygame.time.get_ticks() + 250
 
 charactersGroup = pygame.sprite.Group()
 character = Character()
@@ -83,9 +83,9 @@ while done == False:
             done = True                     # Flag that we are done so we exit this loop
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                movement = -5
+                movement = -1
             if event.key == pygame.K_RIGHT:
-                movement =5
+                movement =1
         if event.type == pygame.KEYUP:
             movement = 0
 
@@ -94,7 +94,7 @@ while done == False:
         nextObject = FallingObject()
         nextObject.setImage("Apple.png")
         allFallingObjects.add(nextObject)
-        nextApple = pygame.time.get_ticks() + 1500
+        nextApple = pygame.time.get_ticks() + 150
 
 
 
@@ -118,7 +118,7 @@ while done == False:
     screen.blit( textImg, (10,10) )
 
     pygame.display.flip()                   # Go ahead and update the screen with what we've drawn.
-    clock.tick(40)                       # Limit to 20 frames per second
+    clock.tick(100)                       # Limit to 20 frames per second
 
 pygame.quit()                               # Close the window and quit.
 
